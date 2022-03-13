@@ -1,7 +1,7 @@
 <idea-plugin>
 	<id>imiatselski.idea_legacy_find_in_files_logic_plugin</id>
 	<name>Legacy Find in Files Logic</name>
-	<version>0.1</version>
+	<version>0.1.0</version>
 	<vendor email="imiatselski@gmail.com" url="https://github.com/ALEUT/idea-legacy-find-in-files-logic-plugin">Ivan Miatselski</vendor>
 
 	<description><![CDATA[<html>
@@ -9,12 +9,6 @@
 	<p>This logic was changed in <a href="https://youtrack.jetbrains.com/issue/IDEA-212529">this</a> task
 	and for me personally the old one was more suitable to find code blocks because usually code block have different trailing spaces.</p>
 	</html>]]></description>
-
-	<change-notes><![CDATA[<html>
-	<dl>
-	<dt>Version 0.1</dt><dd>Initial Release</dd>
-	</dl>
-	</html>]]></change-notes>
 
 	<!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
 	<idea-version since-build="213"/>
