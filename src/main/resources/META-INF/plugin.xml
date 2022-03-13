@@ -1,7 +1,7 @@
 <idea-plugin>
-	<id>imiatselski.idea_legacy_find_in_files_logic_plugin</id>
-	<name>Legacy Find in Files Logic</name>
-	<vendor email="imiatselski@gmail.com" url="https://github.com/ALEUT/idea-legacy-find-in-files-logic-plugin">Ivan Miatselski</vendor>
+	<id>imiatselski.idea_find_in_files_ignoring_whitespaces_plugin</id>
+	<name>Find in Files Ignoring Whitespaces</name>
+	<vendor email="imiatselski@gmail.com" url="https://github.com/ALEUT/idea-find-in-files-ignoring-whitespaces-plugin">Ivan Miatselski</vendor>
 
 	<!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
 		 on how to target different products -->
@@ -13,9 +13,9 @@
 
 	<actions>
 		<action id="imiatselski.FindInFiles.Editor"
-				class="imiatselski.idea_legacy_find_in_files_logic_plugin.FindInFilesAction"
-				text="Find in Files Using Legacy Logic"
-				description="Find in files using legacy logic">
+				class="imiatselski.idea_find_in_files_ignoring_whitespaces_plugin.FindInFilesIgnoringWhitespacesAction"
+				text="Find in Files Ignoring Whitespaces"
+				description="Find in files ignoring whitespaces">
 			<add-to-group group-id="EditorPopupMenu" anchor="first"/>
 			<add-to-group group-id="Diff.EditorPopupMenu" anchor="first"/>
 		</action>

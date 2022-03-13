@@ -1,4 +1,4 @@
-package imiatselski.idea_legacy_find_in_files_logic_plugin;
+package imiatselski.idea_find_in_files_ignoring_whitespaces_plugin;
 
 import com.intellij.find.FindManager;
 import com.intellij.find.FindModel;
@@ -10,7 +10,7 @@ import com.intellij.openapi.editor.CaretModel;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
 
-public class FindInFilesAction extends AnAction {
+public class FindInFilesIgnoringWhitespacesAction extends AnAction {
 
 	@Override
 	public void actionPerformed(AnActionEvent e) {
@@ -20,7 +20,7 @@ public class FindInFilesAction extends AnAction {
 
 		if (selectedText != null) {
 			String regexp = escapeToRegexp(selectedText);
-			regexp = regexp.replaceAll("\\\\n\\s*", "\\\\n\\\\s*");
+			regexp = regexp.replaceAll("\\\\n\\s*", "\\\\n\\\\s*").replaceAll("\\s+", "\\\\s+");
 
 			Project project = e.getRequiredData(CommonDataKeys.PROJECT);
 			FindManager findManager = FindManager.getInstance(project);
@@ -45,10 +45,12 @@ public class FindInFilesAction extends AnAction {
 		StringBuilder result = new StringBuilder();
 		for (int i = 0; i < text.length(); i++) {
 			final char c = text.charAt(i);
-			if (c == ' ' || Character.isLetter(c) || Character.isDigit(c) || c == '_') {
+			if (Character.isLetter(c) || Character.isDigit(c) || c == '_') {
 				result.append(c);
 			} else if (c == '\n') {
 				result.append("\\n");
+			} else if (Character.isWhitespace(c)) {
+				result.append(' ');
 			} else {
 				result.append('\\').append(c);
 			}
