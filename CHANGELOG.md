@@ -5,7 +5,3 @@
 ## [0.1.0]
 ### Changed
 - Initial Release
-
-## [0.1.1]
-### Changed
-- Fix plugin description
