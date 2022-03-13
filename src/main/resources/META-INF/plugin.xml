@@ -1,0 +1,40 @@
+<idea-plugin>
+	<id>imiatselski.idea_legacy_search_logic_plugin</id>
+	<name>Legacy Search Logic</name>
+	<version>0.1</version>
+	<vendor email="imiatselski@gmail.com" url="https://github.com/ALEUT/idea-legacy-search-logic-plugin">Ivan Miatselski</vendor>
+
+	<description><![CDATA[<html>
+	<p>This plugin adds new action (Search Using Legacy Logic) on top of context menu for selected text for editor and diff.</p>
+	<p>This logic was changed in <a href="https://youtrack.jetbrains.com/issue/IDEA-212529">this</a> task
+	and for me personally the old one was more suitable to find code blocks because usually code block have different trailing spaces.</p>
+	</html>]]></description>
+
+	<change-notes><![CDATA[<html>
+	<dl>
+	<dt>Version 0.1</dt><dd>Initial Release</dd>
+	</dl>
+	</html>]]></change-notes>
+
+	<!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
+	<idea-version since-build="213"/>
+
+	<!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+		 on how to target different products -->
+	<depends>com.intellij.modules.lang</depends>
+
+	<extensions defaultExtensionNs="com.intellij">
+		<!-- Add your extensions here -->
+	</extensions>
+
+	<actions>
+		<action id="imiatselski.SearchUsingLegacyLogic.Editor"
+				class="imiatselski.idea_legacy_search_logic_plugin.SearchAction"
+				text="Search Using Legacy Logic"
+				description="Search using legacy logic">
+			<add-to-group group-id="EditorPopupMenu" anchor="first"/>
+			<add-to-group group-id="Diff.EditorPopupMenu" anchor="first"/>
+		</action>
+	</actions>
+
+</idea-plugin>
