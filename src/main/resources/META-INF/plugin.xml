@@ -1,17 +1,7 @@
 <idea-plugin>
 	<id>imiatselski.idea_legacy_find_in_files_logic_plugin</id>
 	<name>Legacy Find in Files Logic</name>
-	<version>0.1.0</version>
 	<vendor email="imiatselski@gmail.com" url="https://github.com/ALEUT/idea-legacy-find-in-files-logic-plugin">Ivan Miatselski</vendor>
-
-	<description><![CDATA[<html>
-	<p>This plugin adds new action (Find in Files Using Legacy Logic) on top of context menu for selected text for editor and diff.</p>
-	<p>This logic was changed in <a href="https://youtrack.jetbrains.com/issue/IDEA-212529">this</a> task
-	and for me personally the old one was more suitable to find code blocks because usually code block have different trailing spaces.</p>
-	</html>]]></description>
-
-	<!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
-	<idea-version since-build="213"/>
 
 	<!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
 		 on how to target different products -->
