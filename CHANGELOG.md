@@ -9,3 +9,7 @@
 ## [0.1.1]
 ### Changed
 - Fixing pluginUntilBuild
+
+## [0.1.2]
+### Changed
+- Fixing pluginUntilBuild
