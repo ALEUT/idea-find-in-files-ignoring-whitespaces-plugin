@@ -13,3 +13,7 @@
 ## [0.1.2]
 ### Changed
 - Fixing pluginUntilBuild
+
+## [0.1.3]
+### Changed
+- Remove pluginUntilBuild
