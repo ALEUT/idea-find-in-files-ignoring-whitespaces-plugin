@@ -1,8 +1,11 @@
 package imiatselski.idea_find_in_files_ignoring_whitespaces_plugin;
 
+import org.jetbrains.annotations.NotNull;
+
 import com.intellij.find.FindManager;
 import com.intellij.find.FindModel;
 import com.intellij.find.findInProject.FindInProjectManager;
+import com.intellij.openapi.actionSystem.ActionUpdateThread;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
@@ -57,5 +60,10 @@ public class FindInFilesIgnoringWhitespacesAction extends AnAction {
 		}
 
 		return result.toString();
+	}
+
+	@Override
+	public @NotNull ActionUpdateThread getActionUpdateThread() {
+		return ActionUpdateThread.BGT;
 	}
 }

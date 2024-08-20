@@ -17,3 +17,8 @@
 ## [0.1.3]
 ### Changed
 - Remove pluginUntilBuild
+
+## [0.1.4]
+### Changed
+- Fixed PluginException
+- Min supported version is 2022.3
